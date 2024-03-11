@@ -23,6 +23,9 @@ public class RenderSettings {
     }
 
     public void setWidth(int width) {
+        if(width <= 0){
+            throw new IllegalArgumentException("Width can't be 0 or negative");
+        }
         this.width = width;
     }
 
@@ -31,6 +34,9 @@ public class RenderSettings {
     }
 
     public void setHeight(int height) {
+        if(height <= 0){
+            throw new IllegalArgumentException("Height can't be 0 or negative");
+        }
         this.height = height;
     }
 
